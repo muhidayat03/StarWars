@@ -12,10 +12,9 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact component={Film} />
-        <Route path="/people" exact component={() => <div>{People}</div>} />
-        <Route path="/:filmId" exact component={() => <div>Film Detail</div>} />
+        <Route path="/people" component={People} />
 
-        {/* <Route component={() => <Redirect to="/" />} /> */}
+        <Route component={() => <div>asdfasdf</div>} />
       </Switch>
     </>
   );

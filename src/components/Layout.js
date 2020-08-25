@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { Row, Column } from "simple-flexbox";
 
 const Layout = (props) => (
-  <main>
+  <main style={{ width: "100%", backgroundColor: "#eee" }}>
     <Row className={css(styles.maxContainer)} horizontal="space-between" wrap>
       {props.children}
     </Row>

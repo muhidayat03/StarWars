@@ -8,7 +8,8 @@ import Layout from "../components/Layout";
 const Film = (props) => {
   const { data, error, pending } = useSelector((state) => state.listFilm);
   const dispatch = useDispatch();
-  let result;
+  let result = <div></div>;
+
 
   useEffect(() => {
     const getFilm = async () => {
@@ -22,10 +23,13 @@ const Film = (props) => {
     result = data.results.map((film, i) => <FilmCard data={film} key={i} />);
   }
 
+  if (pending) {
+    return <h1 style={{ padding: 20, textAlign: "center" }}>Loading ...</h1>;
+  }
+
   return (
     <>
-      <h1 style={{ padding: 20 }}>film</h1>
-
+      <h1 style={{ padding: 20, textAlign: "center" }}>film</h1>
       <Layout>{result}</Layout>
     </>
   );

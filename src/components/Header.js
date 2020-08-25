@@ -20,12 +20,12 @@ const Header = (props) => (
       <div className={css(styles.maxContainer)}>
         <ul>
           <li className={css(styles.menu)}>
-            <NavLink to="/" className={css(styles.link)}>
+            <NavLink to="/" exact className={css(styles.link)}>
               Film
             </NavLink>
           </li>
           <li className={css(styles.menu)}>
-            <NavLink to="/pepole" className={css(styles.link)}>
+            <NavLink to="/people" exact className={css(styles.link)}>
               People
             </NavLink>
           </li>

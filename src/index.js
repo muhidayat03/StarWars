@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 
 //router
-import { Router } from "react-router";
+import { BrowserRouter as Router } from "react-router-dom";
 import { history } from "./helpers/history";
 
 //redux
